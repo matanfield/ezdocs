@@ -1,0 +1,35 @@
+{
+  "name": "notiondocs",
+  "version": "1.0.0",
+  "description": "NotionDocs is a mini app that reads a Notion wiki and converts it to a Vitepress site.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
+    "scaffold": "node --loader ts-node/esm scripts/scaffold.ts",
+    "notion:auth": "node --loader ts-node/esm scripts/notion-auth.ts",
+    "sync": "node --loader ts-node/esm scripts/sync.ts",
+    "deploy": "node --loader ts-node/esm scripts/deploy.ts"
+  },
+  "keywords": [
+    "notion",
+    "vitepress",
+    "documentation",
+    "markdown"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@notionhq/client": "^2.2.13",
+    "@types/node": "^20.10.5",
+    "dotenv": "^16.3.1",
+    "octokit": "^4.0.3",
+    "typescript": "^5.3.3",
+    "vitepress": "^1.0.0-rc.31"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  }
+}
