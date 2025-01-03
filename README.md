@@ -1,4 +1,4 @@
-# NotionDocs
+# Ezdocs
 
 Convert your Notion wiki into a beautiful VitePress documentation site.
 
@@ -6,8 +6,8 @@ Convert your Notion wiki into a beautiful VitePress documentation site.
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/notiondocs.git
-cd notiondocs
+git clone https://github.com/matanfield/ezdocs.git
+cd ezdocs
 ```
 
 2. Install dependencies:
