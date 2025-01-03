@@ -1,17 +1,19 @@
 {
-  "name": "notiondocs",
+  "name": "ezdocs",
   "version": "1.0.0",
-  "description": "NotionDocs is a mini app that reads a Notion wiki and converts it to a Vitepress site.",
+  "description": "Ezdocs - Convert your Notion wiki into a beautiful VitePress site",
   "type": "module",
-  "main": "index.js",
+  "main": "app/src/main.ts",
   "scripts": {
-    "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "preview": "vitepress preview docs",
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
     "scaffold": "node --loader ts-node/esm scripts/scaffold.ts",
     "notion:auth": "node --loader ts-node/esm scripts/notion-auth.ts",
+    "notion:test": "node --loader ts-node/esm scripts/test-notion.ts",
     "sync": "node --loader ts-node/esm scripts/sync.ts",
-    "deploy": "node --loader ts-node/esm scripts/deploy.ts"
+    "deploy": "node --loader ts-node/esm scripts/deploy.ts",
+    "server": "node --loader ts-node/esm server.ts"
   },
   "keywords": [
     "notion",
@@ -23,13 +25,28 @@
   "license": "ISC",
   "dependencies": {
     "@notionhq/client": "^2.2.13",
+    "@types/cors": "^2.8.17",
     "@types/node": "^20.10.5",
+    "@vitejs/plugin-vue": "^5.0.2",
+    "@vueuse/core": "^12.3.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
+    "express": "^4.21.2",
     "octokit": "^4.0.3",
+    "open": "^10.1.0",
+    "pinia": "^2.1.7",
     "typescript": "^5.3.3",
-    "vitepress": "^1.0.0-rc.31"
+    "vite": "^5.0.10",
+    "vue": "^3.4.3",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
-    "ts-node": "^10.9.2"
+    "@types/express": "^5.0.0",
+    "@types/open": "^6.1.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "ts-node": "^10.9.2",
+    "vue-tsc": "^1.8.27"
   }
 }
